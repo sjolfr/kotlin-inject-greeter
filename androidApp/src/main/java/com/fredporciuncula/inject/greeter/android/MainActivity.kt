@@ -15,11 +15,6 @@ import androidx.compose.ui.graphics.Color
 import com.fredporciuncula.inject.greeter.GreetingHandler
 import me.tatarka.inject.annotations.Component
 
-@Component
-abstract class MainActivityComponent(@Component val parent: ApplicationComponent) {
-  abstract val greetingHandlerCreator: (String) -> GreetingHandler
-}
-
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
